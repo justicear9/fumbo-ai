@@ -9,7 +9,7 @@ import { contactInfo } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Book a demo with Fumbo Ai Ltd—tell us about your channels, markets, and goals.",
+  description: "Book a demo with Fumbo Ai. Tell us your channels, markets, and the work those threads create.",
 };
 
 export default function ContactPage() {
@@ -22,7 +22,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Tell us how customers reach you"
-        description="WhatsApp, web, social, email—and the work those threads create inside your team. We’ll map a focused path to a live assistant."
+        description="Web, social, email, WhatsApp, and the operational work those threads create. We will map a first live slice."
       />
 
       <section className="bg-[#050a08] px-4 pb-16 md:px-8 md:pb-20">
@@ -62,15 +62,15 @@ export default function ContactPage() {
                   <ul className="mt-8 space-y-4 text-sm text-white/55">
                     <li className="flex gap-3">
                       <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-fumbo-mint" />
-                      Omnichannel mapping for your stack
+                      The channels you already run
                     </li>
                     <li className="flex gap-3">
                       <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-fumbo-mint" />
-                      Localization and cultural tone review
+                      Tone and language for your market
                     </li>
                     <li className="flex gap-3">
                       <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-fumbo-mint" />
-                      Discover → design → pilot → optimize
+                      Discover, design, pilot, then widen
                     </li>
                   </ul>
                   <p className="mt-auto pt-10 text-sm text-white/40">
@@ -80,7 +80,7 @@ export default function ContactPage() {
                     </Link>{" "}
                     or{" "}
                     <Link href="/product" className="text-fumbo-mint hover:text-[#5ff0b8]">
-                      explore services
+                      see services
                     </Link>
                     .
                   </p>

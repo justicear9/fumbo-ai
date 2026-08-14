@@ -10,7 +10,7 @@ import { services, useCases } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "AI chatbots and automation from Fumbo Ai—conversations on WhatsApp, web, and social, wired into the tools your team already uses.",
+    "Operations AI and chatbots from Fumbo Ai. Automations that finish the work, on web, social, email, and WhatsApp.",
 };
 
 export default function ProductPage() {
@@ -18,8 +18,8 @@ export default function ProductPage() {
     <SiteShell>
       <PageHero
         eyebrow="Services"
-        title="AI chatbots and automation services"
-        description="Intelligent conversations for your customers—and the workflows those conversations create. Built for WhatsApp, web, social, and email."
+        title="Chatbots for the reply. Automation for the work behind it."
+        description="Automations finish the ticket, the order check, the CRM update. Chatbots on web, social, email, and WhatsApp are how customers reach that system."
         actions={
           <>
             <Link
@@ -45,8 +45,8 @@ export default function ProductPage() {
         <div className="mx-auto max-w-[1400px]">
           <Reveal>
             <SectionIntro
-              title="Two pillars. One partner."
-              body="Chatbots handle the conversation. Automation handles the busywork. Together they free your people for work that needs judgment."
+              title="Two services. One partner."
+              body="The chatbot handles the reply. Automation handles the busywork. Your people keep the work that needs judgment."
             />
           </Reveal>
 
@@ -89,7 +89,7 @@ export default function ProductPage() {
           <Reveal>
             <SectionIntro
               title="Where the work gets done"
-              body="Recommendations, FAQs, support, and the automations that keep those journeys moving."
+              body="Recommendations, FAQs, support, and the automations that keep those threads moving."
             />
           </Reveal>
           <div className="mt-14 grid gap-4 md:grid-cols-2">
@@ -112,7 +112,7 @@ export default function ProductPage() {
 
       <CtaBand
         title="See Fumbo on your channels"
-        body="We’ll walk through how chatbots and automation can fit your brand, languages, and stack."
+        body="We will walk through chatbots and automation against your brand, languages, and tools."
       />
     </SiteShell>
   );

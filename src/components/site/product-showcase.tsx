@@ -13,7 +13,7 @@ const messages = [
   },
   {
     from: "bot" as const,
-    text: "Sure—I can help with that. Reply with 1 for daily, 2 for weekly, or 3 for monthly bundles.",
+    text: "Sure. I can help with that. Reply with 1 for daily, 2 for weekly, or 3 for monthly bundles.",
   },
   {
     from: "customer" as const,
@@ -26,7 +26,7 @@ const messages = [
 ];
 
 const flow = [
-  "WhatsApp message",
+  "Customer message",
   "Intent detected",
   "CRM / billing check",
   "Reply or route to agent",
@@ -107,7 +107,7 @@ function LiveChat() {
           </span>
           <div>
             <p className="text-sm font-medium text-white">Fumbo assistant</p>
-            <p className="text-xs text-fumbo-mint/80">WhatsApp · Online</p>
+            <p className="text-xs text-fumbo-mint/80">Online</p>
           </div>
         </div>
         <span className="shrink-0 rounded-full border border-fumbo-mint/25 bg-fumbo-mint/10 px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-fumbo-mint">
@@ -169,8 +169,8 @@ function LiveFlow() {
           From message to action
         </h3>
         <p className="mt-3 max-w-[40ch] text-sm leading-relaxed text-white/55">
-          Chat captures intent. Automation checks systems, replies, or escalates—so people only
-          jump in when judgment is needed.
+          Chat captures intent. Automation checks systems, replies, or escalates. People jump in
+          when judgment is needed.
         </p>
       </div>
 
@@ -227,7 +227,7 @@ export function ProductShowcase() {
         <Reveal>
           <SectionIntro
             title="What it looks like in practice"
-            body="Not just a brand robot—real conversations on the channels your customers use, wired into the systems your team already runs."
+            body="A live conversation on the left. The system steps on the right."
           />
         </Reveal>
 

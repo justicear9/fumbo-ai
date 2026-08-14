@@ -8,7 +8,7 @@ import { AmbientField } from "@/components/site/ambient-field";
 import { ChannelMarquee } from "@/components/site/channel-marquee";
 import { company } from "@/lib/content";
 
-const chips = ["AI chatbots", "Automation services", "WhatsApp-ready"];
+const chips = ["AI Chatbots", "Automation Services", "Operations AI"];
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -32,7 +32,7 @@ export function Hero() {
               <span className="absolute inset-0 animate-ping rounded-full bg-fumbo-mint/60" />
               <span className="relative h-1.5 w-1.5 rounded-full bg-fumbo-mint" />
             </span>
-            {company.shortName} · Accra
+            {company.shortName}
           </motion.p>
 
           <motion.h1
@@ -50,8 +50,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
-            Intelligent conversations on WhatsApp, web, and social—plus automations that clear
-            routine work. Built with cultural nuance for Ghana, West Africa, and beyond.
+            {company.heroLead}
           </motion.p>
 
           <motion.div
@@ -107,18 +106,18 @@ export function Hero() {
               href="/product"
               className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white/85 backdrop-blur-sm transition-colors duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-white/25 hover:bg-white/10"
             >
-              Explore services
+              See services
             </Link>
           </motion.div>
         </div>
 
         <motion.div
-          className="relative z-10 h-[min(54vh,480px)] w-full lg:absolute lg:inset-y-0 lg:left-1/2 lg:right-[calc(50%-50vw)] lg:h-auto"
+          className="relative z-10 h-[min(54vh,480px)] w-full lg:absolute lg:inset-y-0 lg:left-[34%] lg:right-0 lg:h-auto xl:left-[38%] 2xl:left-[44%] 2xl:right-[calc(50%-50vw)]"
           initial={reduce ? false : { opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="absolute inset-0 lg:origin-bottom lg:scale-[0.94] xl:scale-[0.9]">
+          <div className="absolute inset-0 origin-bottom scale-[1.06] lg:-translate-x-[6%] lg:scale-[1.02] xl:-translate-x-[3%] xl:scale-[0.96] 2xl:translate-x-0 2xl:scale-[0.9]">
             <SplineScene
               scene="/spline/robot.splinecode"
               className="absolute inset-0"

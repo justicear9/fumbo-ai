@@ -8,7 +8,7 @@
   "/contact/page": "app/contact/page.js",
   "/privacy/page": "app/privacy/page.js",
   "/about/page": "app/about/page.js",
-  "/product/page": "app/product/page.js",
   "/industries/page": "app/industries/page.js",
-  "/terms/page": "app/terms/page.js"
+  "/terms/page": "app/terms/page.js",
+  "/product/page": "app/product/page.js"
 }

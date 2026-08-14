@@ -6,8 +6,7 @@ import { FaqList } from "@/components/site/faq-list";
 
 export const metadata: Metadata = {
   title: "FAQ",
-  description:
-    "Answers about Fumbo Ai chatbots, automation services, omnichannel integration, localization, and partnership.",
+  description: "How Fumbo Ai chatbots and automations work, who we serve, and what a first engagement looks like.",
 };
 
 export default function FaqPage() {
@@ -16,7 +15,7 @@ export default function FaqPage() {
       <PageHero
         eyebrow="FAQ"
         title="Questions teams ask first"
-        description="Straight answers about how Fumbo works, who we serve, and what a first engagement looks like."
+        description="How Fumbo works, who we serve, and what a first engagement looks like."
       />
 
       <section className="bg-[#050a08] px-4 pb-24 md:px-8 md:pb-32">
@@ -25,16 +24,16 @@ export default function FaqPage() {
           <p className="mt-10 text-sm text-white/45">
             Still looking for something specific?{" "}
             <Link href="/contact" className="text-fumbo-mint hover:text-[#5ff0b8]">
-              Reach out
-            </Link>{" "}
-            and we’ll help.
+              Book a demo
+            </Link>
+            .
           </p>
         </div>
       </section>
 
       <CtaBand
-        title="Let’s get specific to your stack"
-        body="A short conversation beats a long FAQ when you’re mapping real channels and languages."
+        title="Bring your channels"
+        body="A 20-minute call will tell you more than another FAQ."
       />
     </SiteShell>
   );

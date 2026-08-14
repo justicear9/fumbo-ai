@@ -69,7 +69,7 @@ function ChannelLogo({ id, size = 26 }: { id: ChannelId; size?: number }) {
 
 export function ChannelNetwork() {
   const reduce = useReducedMotion();
-  const [active, setActive] = useState<ChannelId>("whatsapp");
+  const [active, setActive] = useState<ChannelId>("web");
   const current = channels.find((channel) => channel.id === active) ?? channels[0];
 
   useEffect(() => {

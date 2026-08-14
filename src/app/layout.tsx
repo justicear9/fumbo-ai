@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     template: "%s | Fumbo Ai",
   },
   description:
-    "Fumbo Ai builds culturally aware AI chatbots and automation services that personalize engagement and streamline operations.",
+    "AI chatbots and automation that understand your market. Conversations on web, WhatsApp, social, and email, plus automations that clear routine work. A Ghanaian company serving teams worldwide.",
   metadataBase: new URL("https://fumbo.ai"),
   openGraph: {
     title: "Fumbo Ai",
     description:
-      "AI chatbots and automation services with cultural sensitivity for omnichannel customer engagement.",
+      "AI chatbots and automation that understand your market. We design, ship, and stay.",
     url: "https://fumbo.ai",
     siteName: "Fumbo Ai",
     type: "website",

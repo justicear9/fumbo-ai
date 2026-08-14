@@ -17,15 +17,15 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1400px]">
           <Reveal>
             <p className="mb-4 text-[11px] font-medium uppercase tracking-[0.22em] text-fumbo-mint/90">
-              Accra · Ghana
+              Accra · Worldwide
             </p>
             <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
               <h2 className="max-w-[18ch] text-3xl font-semibold tracking-tight text-white md:text-5xl">
-                Built for the conversations people here already have
+                One partner for the conversation and the work behind it
               </h2>
               <div className="space-y-5 text-base leading-relaxed text-white/60 md:text-lg">
-                <p>{company.enigma}</p>
                 <p>{company.summary}</p>
+                <p>{company.focus}</p>
               </div>
             </div>
           </Reveal>
@@ -38,7 +38,7 @@ export default function HomePage() {
           <Reveal>
             <SectionIntro
               title="What we do"
-              body="Two things, tightly connected: the conversation with your customer, and the work that conversation creates inside your team."
+              body="AI chatbots on every channel. Automations that clear the work behind them. We design it, ship it, and stay."
             />
           </Reveal>
 
@@ -74,7 +74,7 @@ export default function HomePage() {
                 href="/product"
                 className="inline-flex items-center gap-2 text-sm font-medium text-fumbo-mint transition-colors hover:text-[#5ff0b8]"
               >
-                Full services overview
+                See all services
                 <span aria-hidden>→</span>
               </Link>
             </div>
@@ -89,8 +89,8 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1400px]">
           <Reveal>
             <SectionIntro
-              title="Built for the industries you serve"
-              body="From retail floors to citizen desks—tuned to how each sector actually works."
+              title="Built for the work your sector already does"
+              body="Retail floors, bank queues, campus desks. The systems follow how that sector already talks to people, on every channel they use."
             />
           </Reveal>
 
@@ -135,8 +135,8 @@ export default function HomePage() {
       </section>
 
       <CtaBand
-        title="Ready to see it on your channels?"
-        body="Tell us how customers reach you today. We’ll show a focused path to a live assistant—and the automations behind it."
+        title="See this on your stack"
+        body="Tell us how customers reach you, and what those threads create inside the team. We will map a first live slice."
       />
     </SiteShell>
   );

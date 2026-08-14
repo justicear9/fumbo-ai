@@ -15,8 +15,8 @@ export default function IndustriesPage() {
     <SiteShell>
       <PageHero
         eyebrow="Industries"
-        title="Shaped for how your sector actually works"
-        description="Each engagement is tailored to the workflows, tone, and trust expectations of that industry—not a one-size bot with the logo swapped."
+        title="Built for how your sector already talks to people"
+        description="Each engagement follows that industry's workflows, tone, and trust rules."
       />
 
       <section className="bg-[#050a08] px-4 pb-20 md:px-8 md:pb-28">
@@ -64,9 +64,9 @@ export default function IndustriesPage() {
       </section>
 
       <CtaBand
-        title="Bring us your industry brief"
-        body="Share the channels, languages, and service goals that matter—we’ll map a focused engagement around them."
-        label="Talk to us"
+        title="Tell us how your sector talks to customers"
+        body="Share the channels, languages, and the work those threads create. We will map a first engagement."
+        label="Book a demo"
       />
     </SiteShell>
   );

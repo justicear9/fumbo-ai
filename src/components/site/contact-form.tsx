@@ -127,7 +127,7 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
             rows={compact ? 3 : 5}
             maxLength={4000}
             className="w-full min-w-0 resize-none rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition-[border-color,box-shadow] duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] placeholder:text-white/30 focus:border-fumbo-mint/50 focus:shadow-[0_0_0_3px_rgba(36,237,164,0.15)]"
-            placeholder="Channels, languages, industry, and the problems you want solved"
+            placeholder="Channels, languages, and what the assistant should handle first"
           />
         </div>
         <button
@@ -135,14 +135,14 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
           disabled={status === "sending"}
           className="group inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-fumbo-mint px-5 py-3 text-sm font-semibold text-[#04110c] transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-[#5ff0b8] active:scale-[0.98] disabled:cursor-wait disabled:opacity-70"
         >
-          {status === "sending" ? "Sending…" : "Send request"}
+          {status === "sending" ? "Sending…" : "Request a demo"}
           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#04110c]/12">
             →
           </span>
         </button>
         {status === "sent" ? (
           <p className="text-sm text-fumbo-mint" role="status">
-            Received. We’ll get back to you shortly.
+            Received. We will get back to you shortly.
           </p>
         ) : null}
         {status === "error" ? (

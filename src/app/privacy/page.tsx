@@ -14,21 +14,20 @@ export default function PrivacyPage() {
       <PageHero
         eyebrow="Legal"
         title="Privacy"
-        description="We take privacy seriously. This page outlines how Fumbo Ai Ltd approaches personal data in the context of our website and product engagements."
+        description="How Fumbo Ai Ltd handles personal data on this website and in product work."
         showRobot={false}
       />
       <section className="bg-[#050a08] px-4 pb-24 md:px-8 md:pb-32">
         <div className="mx-auto max-w-[720px] space-y-8 text-sm leading-relaxed text-white/60 md:text-base">
           <p>
-            When you contact us through this site, we use the information you provide—such as name,
-            work email, company, and message—to respond to your inquiry and schedule demos. We do
-            not sell this information.
+            When you contact us through this site, we use the information you provide (name, work
+            email, company, and message) to reply and schedule demos. We do not sell this
+            information.
           </p>
           <p>
             For deployed chatbots and automations, data handling is defined in your commercial
-            agreement
-            and aligned with your industry and compliance requirements. Encryption, access
-            controls, and privacy-minded deployment practices are part of every rollout.
+            agreement and aligned with your industry and compliance requirements. Encryption, access
+            controls, and careful deployment are part of every rollout.
           </p>
           <p>
             If you have privacy questions, email us through the{" "}

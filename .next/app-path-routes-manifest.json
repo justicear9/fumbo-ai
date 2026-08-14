@@ -8,7 +8,7 @@
   "/contact/page": "/contact",
   "/privacy/page": "/privacy",
   "/about/page": "/about",
-  "/product/page": "/product",
   "/industries/page": "/industries",
-  "/terms/page": "/terms"
+  "/terms/page": "/terms",
+  "/product/page": "/product"
 }

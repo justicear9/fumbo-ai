@@ -8,13 +8,13 @@ import { company, values, whyFumbo } from "@/lib/content";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Fumbo Ai is an Accra-based company building AI chatbots and automations for Ghana and markets like it.",
+    "Fumbo Ai is a Ghanaian company that builds AI chatbots and automation for teams worldwide.",
 };
 
 const facts = [
   { label: "Based in", value: "Accra, Ghana" },
-  { label: "Channels", value: "WhatsApp, web, social, email" },
-  { label: "Focus", value: "Chatbots + automation" },
+  { label: "Channels", value: "Web, social, email, WhatsApp" },
+  { label: "Focus", value: "AI chatbots and automation" },
 ] as const;
 
 export default function AboutPage() {
@@ -22,7 +22,7 @@ export default function AboutPage() {
     <SiteShell>
       <PageHero
         eyebrow="About Fumbo Ai Ltd"
-        title="An Accra company building AI that belongs here"
+        title="Who we are"
         description={company.summary}
       />
 
@@ -47,10 +47,10 @@ export default function AboutPage() {
           <div>
             <Reveal>
               <h2 className="max-w-[16ch] text-3xl font-semibold tracking-tight text-white md:text-5xl">
-                Why the name
+                A Ghanaian company, built for global teams
               </h2>
               <p className="mt-5 text-base leading-relaxed text-white/60 md:text-lg">
-                {company.enigma}
+                {company.summary}
               </p>
               <p className="mt-5 text-base leading-relaxed text-white/60 md:text-lg">
                 {company.mission}
@@ -62,7 +62,7 @@ export default function AboutPage() {
                 href="/product"
                 className="mt-10 inline-flex items-center gap-2 text-sm font-medium text-fumbo-mint hover:text-[#5ff0b8]"
               >
-                Explore services
+                See services
                 <span aria-hidden>→</span>
               </Link>
             </Reveal>
@@ -75,7 +75,7 @@ export default function AboutPage() {
           <Reveal>
             <SectionIntro
               title="Why teams work with us"
-              body="Not a generic bot with a Ghana sticker on it. Software shaped around the channels, languages, and operations you already have."
+              body="Software shaped around the channels, languages, and operations you already have."
             />
           </Reveal>
 
@@ -100,11 +100,11 @@ export default function AboutPage() {
           <Reveal>
             <SectionIntro
               title="How we show up"
-              body="These are the standards we hold when we design a flow, sit with a client, or ship a change."
+              body="The standards we hold when we design a flow, sit with a client, or ship a change."
             />
           </Reveal>
 
-          <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((value, index) => (
               <Reveal key={value.title} delay={Math.min(index * 0.03, 0.2)} className="h-full min-w-0">
                 <article className="flex h-full min-h-[180px] flex-col justify-between rounded-[1.25rem] border border-white/10 bg-[#0a1511] p-5 transition-[border-color] duration-300 hover:border-white/20">
@@ -118,8 +118,8 @@ export default function AboutPage() {
       </section>
 
       <CtaBand
-        title="Let’s talk about your channels"
-        body="If customers already message you on WhatsApp, we should start there—not with a slide deck about the future of AI."
+        title="Start with how customers already reach you"
+        body="We start with your channels and the operational work those threads create."
       />
     </SiteShell>
   );

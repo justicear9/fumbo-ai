@@ -39,8 +39,8 @@ export function ChannelsSection() {
       <div className="relative mx-auto max-w-[1400px]">
         <Reveal>
           <SectionIntro
-            title="Meet customers where they already are"
-            body="In Ghana, a WhatsApp thread often beats a website form. One assistant, connected across the inboxes you already run."
+            title="Meet customers on the channels they already use"
+            body="Web, social, email, WhatsApp: one assistant, connected across the inboxes you already run."
           />
         </Reveal>
         <ChannelNetwork />
@@ -56,8 +56,8 @@ export function ProcessSection() {
       <div className="relative mx-auto max-w-[1400px]">
         <Reveal>
           <SectionIntro
-            title="How an engagement starts"
-            body="One live slice first—then we widen coverage with your team."
+            title="How we start"
+            body="One live slice first. Then we widen coverage with your team."
           />
         </Reveal>
         <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
