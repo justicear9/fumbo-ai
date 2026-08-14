@@ -13,8 +13,14 @@
 # testing
 /coverage
 
-# next.js
-/.next/
+# next.js — commit the production build so cPanel can git pull it.
+# Skip local-dev cache and Finder duplicates (".next 2").
+/.next/cache/
+/.next/dev/
+/.next/diagnostics/
+/.next/trace
+/.next/trace-build
+/.next 2/
 /out/
 next-build.zip
 
