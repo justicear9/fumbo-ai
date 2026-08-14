@@ -15,15 +15,15 @@ export function FaqList({ limit }: { limit?: number }) {
       {items.map((faq, index) => {
         const open = openIndex === index;
         return (
-          <Reveal key={faq.question} delay={index * 0.04}>
+          <Reveal key={faq.question} delay={index * 0.04} className="min-w-0">
             <div className="rounded-[1.25rem] border border-white/10 bg-[#0a1511]/80">
               <button
                 type="button"
-                className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left md:px-7"
+                className="flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-5 text-left md:px-7"
                 aria-expanded={open}
                 onClick={() => setOpenIndex(open ? -1 : index)}
               >
-                <span className="text-base font-medium text-white md:text-lg">
+                <span className="min-w-0 flex-1 text-base font-medium text-white md:text-lg">
                   {faq.question}
                 </span>
                 <CaretDown

@@ -98,9 +98,9 @@ function LiveChat() {
   }, [reduce]);
 
   return (
-    <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#0a1511]/95 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
-      <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
-        <div className="flex items-center gap-3">
+    <div className="flex h-full min-h-[420px] flex-col overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#0a1511]/95 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
+      <div className="flex items-center justify-between gap-3 border-b border-white/10 px-5 py-4">
+        <div className="flex min-w-0 items-center gap-3">
           <span className="relative flex h-2.5 w-2.5">
             <span className="absolute inset-0 animate-ping rounded-full bg-fumbo-mint/50" />
             <span className="relative rounded-full bg-fumbo-mint h-2.5 w-2.5" />
@@ -110,11 +110,11 @@ function LiveChat() {
             <p className="text-xs text-fumbo-mint/80">WhatsApp · Online</p>
           </div>
         </div>
-        <span className="rounded-full border border-fumbo-mint/25 bg-fumbo-mint/10 px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-fumbo-mint">
+        <span className="shrink-0 rounded-full border border-fumbo-mint/25 bg-fumbo-mint/10 px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-fumbo-mint">
           Live sample
         </span>
       </div>
-      <div className="flex min-h-[320px] flex-col justify-end space-y-3 p-5 md:min-h-[360px] md:p-6">
+      <div className="flex min-h-0 flex-1 flex-col justify-end space-y-3 p-5 md:p-6">
         <AnimatePresence initial={false}>
           {messages.slice(0, visibleCount).map((message) => (
             <motion.div
@@ -159,7 +159,7 @@ function LiveFlow() {
   }, [reduce]);
 
   return (
-    <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#0a1511]/95 p-6 md:p-8">
+    <div className="relative flex h-full min-h-[420px] flex-col justify-between overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#0a1511]/95 p-6 md:p-8">
       <AmbientField intensity="soft" className="opacity-80" />
       <div className="relative z-10">
         <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-fumbo-blue">
@@ -231,11 +231,11 @@ export function ProductShowcase() {
           />
         </Reveal>
 
-        <div className="mt-14 grid gap-4 lg:grid-cols-2">
-          <Reveal>
+        <div className="mt-14 grid items-stretch gap-4 lg:grid-cols-2">
+          <Reveal className="h-full min-w-0">
             <LiveChat />
           </Reveal>
-          <Reveal delay={0.08}>
+          <Reveal delay={0.08} className="h-full min-w-0">
             <LiveFlow />
           </Reveal>
         </div>

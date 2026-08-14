@@ -5,6 +5,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { SplineScene } from "@/components/ui/splite";
 import { Spotlight } from "@/components/ui/spotlight";
 import { AmbientField } from "@/components/site/ambient-field";
+import { ChannelMarquee } from "@/components/site/channel-marquee";
 import { company } from "@/lib/content";
 
 const chips = ["AI chatbots", "Automation services", "WhatsApp-ready"];
@@ -13,14 +14,14 @@ export function Hero() {
   const reduce = useReducedMotion();
 
   return (
-    <section className="relative min-h-[100dvh] overflow-hidden bg-[#050a08]">
+    <section className="relative flex flex-col overflow-hidden bg-[#050a08] lg:min-h-[100dvh]">
       <AmbientField intensity="medium" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_12%_18%,rgba(36,237,164,0.08),transparent_44%),radial-gradient(ellipse_at_88%_14%,rgba(0,150,246,0.08),transparent_42%)]" />
 
-      <div className="relative mx-auto grid min-h-[100dvh] w-full max-w-[1400px] grid-cols-1 items-center lg:grid-cols-2">
+      <div className="relative mx-auto grid w-full flex-1 max-w-[1400px] grid-cols-1 items-center lg:grid-cols-2">
         <Spotlight size={380} />
 
-        <div className="pointer-events-none relative z-20 flex flex-col justify-center px-4 pb-8 pt-28 md:px-8 lg:pb-16 lg:pt-24">
+        <div className="pointer-events-none relative z-20 flex flex-col justify-center px-4 pb-6 pt-28 md:px-8 lg:pb-8 lg:pt-24">
           <motion.p
             className="mb-5 flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.22em] text-fumbo-mint/90"
             initial={reduce ? false : { opacity: 0, y: 16 }}
@@ -112,17 +113,21 @@ export function Hero() {
         </div>
 
         <motion.div
-          className="relative z-10 h-[min(54vh,480px)] w-full lg:h-[100dvh]"
+          className="relative z-10 h-[min(54vh,480px)] w-full lg:absolute lg:inset-y-0 lg:left-1/2 lg:right-[calc(50%-50vw)] lg:h-auto"
           initial={reduce ? false : { opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
         >
-          <SplineScene
-            scene="/spline/robot.splinecode"
-            className="absolute inset-0"
-          />
+          <div className="absolute inset-0 lg:origin-bottom lg:scale-[0.94] xl:scale-[0.9]">
+            <SplineScene
+              scene="/spline/robot.splinecode"
+              className="absolute inset-0"
+            />
+          </div>
         </motion.div>
       </div>
+
+      <ChannelMarquee className="relative z-20" />
     </section>
   );
 }

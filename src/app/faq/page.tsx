@@ -16,7 +16,7 @@ export default function FaqPage() {
       <PageHero
         eyebrow="FAQ"
         title="Questions teams ask first"
-        description="Straight answers about how Fumbo works, who we serve, and what partnership looks like."
+        description="Straight answers about how Fumbo works, who we serve, and what a first engagement looks like."
       />
 
       <section className="bg-[#050a08] px-4 pb-24 md:px-8 md:pb-32">

@@ -32,6 +32,12 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+
+# cPanel SMTP config (never commit passwords)
+contact.config.php
+**/contact.config.php
+.cpanel-api-bak/
 
 # vercel
 .vercel

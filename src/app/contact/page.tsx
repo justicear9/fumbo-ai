@@ -21,34 +21,25 @@ export default function ContactPage() {
     <SiteShell>
       <PageHero
         eyebrow="Contact"
-        title="Ready to redesign your customer journey?"
-        description="Tell us about your channels, workflows, and markets. We’ll show how Fumbo chatbots and automation can take the routine load."
+        title="Tell us how customers reach you"
+        description="WhatsApp, web, social, email—and the work those threads create inside your team. We’ll map a focused path to a live assistant."
       />
 
       <section className="bg-[#050a08] px-4 pb-16 md:px-8 md:pb-20">
         <div className="mx-auto max-w-[1400px]">
           <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[radial-gradient(ellipse_at_top_left,rgba(36,237,164,0.16),transparent_40%),radial-gradient(ellipse_at_bottom_right,rgba(0,150,246,0.14),transparent_40%),#08140f] p-1.5">
-            <div className="grid gap-10 rounded-[calc(2rem-0.375rem)] border border-white/8 bg-[#07110d]/70 p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] md:grid-cols-[1fr_1fr] md:p-12 lg:p-14">
-              <Reveal>
-                <div>
+            <div className="grid items-stretch gap-10 rounded-[calc(2rem-0.375rem)] border border-white/8 bg-[#07110d]/70 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] sm:p-8 md:grid-cols-2 md:p-12 lg:p-14">
+              <Reveal className="min-w-0">
+                <div className="flex h-full flex-col">
                   <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
                     Book a demo
                   </h2>
                   <p className="mt-4 max-w-[40ch] text-sm leading-relaxed text-white/60 md:text-base">
-                    Based in {contactInfo.location}, serving {contactInfo.serving}. From discovery
-                    through pilot and optimization, we build beside your team.
+                    Based in {contactInfo.location}, serving {contactInfo.serving}. We start with
+                    one channel or one workflow so you can see it live.
                   </p>
 
                   <div className="mt-8 space-y-3 text-sm">
-                    <p>
-                      <span className="text-white/40">Email </span>
-                      <a
-                        href={`mailto:${contactInfo.email}`}
-                        className="text-fumbo-mint hover:text-[#5ff0b8]"
-                      >
-                        {contactInfo.email}
-                      </a>
-                    </p>
                     <p>
                       <span className="text-white/40">Location </span>
                       <span className="text-white/75">{contactInfo.location}</span>
@@ -82,7 +73,7 @@ export default function ContactPage() {
                       Discover → design → pilot → optimize
                     </li>
                   </ul>
-                  <p className="mt-10 text-sm text-white/40">
+                  <p className="mt-auto pt-10 text-sm text-white/40">
                     Prefer to browse first?{" "}
                     <Link href="/faq" className="text-fumbo-mint hover:text-[#5ff0b8]">
                       Read the FAQ
@@ -96,7 +87,9 @@ export default function ContactPage() {
                 </div>
               </Reveal>
 
-              <ContactForm />
+              <div className="relative min-w-0">
+                <ContactForm />
+              </div>
             </div>
           </div>
         </div>

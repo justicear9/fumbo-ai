@@ -15,6 +15,7 @@ export default function PrivacyPage() {
         eyebrow="Legal"
         title="Privacy"
         description="We take privacy seriously. This page outlines how Fumbo Ai Ltd approaches personal data in the context of our website and product engagements."
+        showRobot={false}
       />
       <section className="bg-[#050a08] px-4 pb-24 md:px-8 md:pb-32">
         <div className="mx-auto max-w-[720px] space-y-8 text-sm leading-relaxed text-white/60 md:text-base">

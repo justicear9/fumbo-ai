@@ -4,13 +4,13 @@ export const company = {
   tagline: "AI chatbots and automation that understand your market",
   offering: "AI chatbots and automation services",
   enigma:
-    'Derived from the Swahili word for "enigma," our name captures a blend of innovation and cultural richness.',
+    "In Swahili, fumbo means a riddle. We kept the name because the hard part is never the model—it’s the reply, the language, and the handoff that make someone trust you.",
   summary:
-    "Fumbo Ai builds AI chatbots and automation services that deliver personalized, culturally sensitive experiences—and take routine work off your team’s plate.",
+    "Fumbo Ai builds AI chatbots and automations for teams whose customers already live on WhatsApp, web, and social—not in a contact form.",
   mission:
-    "We reshape customer engagement and operations by combining technological innovation with cultural sensitivity, so businesses can redefine journeys, raise satisfaction, and grow.",
+    "Help businesses in Ghana and similar markets answer at scale without sounding like a template, and without burying staff in the same ten questions every day.",
   focus:
-    "Built with Ghana and diverse markets in mind—customization and localization first, not bolted on later.",
+    "Based in Accra. Designed around how people here actually message, speak, and get things done.",
 } as const;
 
 export const contactInfo = {
@@ -30,43 +30,29 @@ export const navItems = [
 
 export const channels = [
   {
+    id: "whatsapp",
     name: "WhatsApp",
-    body: "Where most customers already message you—support, sales, and updates in-thread.",
+    body: "Support, sales, and updates in the thread your customers already opened.",
   },
   {
+    id: "web",
     name: "Web chat",
-    body: "On-site assistance that matches your brand and hands off to people cleanly.",
+    body: "On-site help that matches your brand and hands off to a person cleanly.",
   },
   {
-    name: "Social messaging",
-    body: "Facebook, Instagram, and other social inboxes without a second playbook.",
+    id: "facebook",
+    name: "Facebook",
+    body: "The same assistant in Messenger—no second script, no second team.",
   },
   {
+    id: "instagram",
+    name: "Instagram",
+    body: "DMs that can actually resolve something, not just collect a screenshot.",
+  },
+  {
+    id: "email",
     name: "Email",
-    body: "Structured replies for longer requests that still stay on-brand.",
-  },
-] as const;
-
-export const automationPackages = [
-  {
-    title: "Lead capture → CRM",
-    body: "Qualify inbound interest from web or WhatsApp and push clean records into your CRM with owner assignment.",
-  },
-  {
-    title: "Ticket triage & routing",
-    body: "Classify support requests, attach context, and route to the right queue—or resolve FAQs automatically.",
-  },
-  {
-    title: "Order & status updates",
-    body: "Pull status from your systems and reply to “Where is my order?” without a human opening a dashboard.",
-  },
-  {
-    title: "Approvals & alerts",
-    body: "Notify the right people, collect yes/no, and log decisions so ops doesn’t live in group chats.",
-  },
-  {
-    title: "Onboarding checklists",
-    body: "Guide new customers or staff through steps, chase missing info, and mark completion in your tools.",
+    body: "Longer requests, still on-brand, still connected to the same systems.",
   },
 ] as const;
 
@@ -93,37 +79,11 @@ export const engagementSteps = [
   },
 ] as const;
 
-/** Illustrative engagement patterns—not named client claims */
-export const proofStories = [
-  {
-    sector: "Telecom · Ghana",
-    title: "Self-serve billing and activation help",
-    problem: "Call centers flooded with balance, data, and activation questions.",
-    approach: "WhatsApp + web assistant with localized phrasing and ticket handoff.",
-    outcome: "Routine queries answered in-channel; agents kept for exceptions.",
-  },
-  {
-    sector: "E-commerce · West Africa",
-    title: "Orders without the ticket pile-up",
-    problem: "Shoppers asking the same tracking and returns questions every day.",
-    approach: "Chatbot tied to order status plus automated update notifications.",
-    outcome: "Faster answers for customers; fewer repetitive support tickets.",
-  },
-  {
-    sector: "Financial services",
-    title: "Routine account help, careful escalation",
-    problem: "Balance and transaction FAQs crowding human queues.",
-    approach: "Secure self-serve flows with clear escalation for sensitive cases.",
-    outcome: "24/7 coverage for routine asks; people reserved for judgment calls.",
-  },
-] as const;
-
-/** Primary service pillars */
 export const services = [
   {
     slug: "chatbots",
     title: "AI chatbots",
-    body: "Intelligent, omnichannel assistants that understand context, interpret intent, and respond in real time—with tone and culture that fit your market.",
+    body: "Assistants that meet customers on WhatsApp, web, social, and email—with tone that fits your market, and a clean handoff when a person should take over.",
     points: [
       "WhatsApp, web, social, and email",
       "Brand-aligned, localized conversations",
@@ -133,62 +93,39 @@ export const services = [
   {
     slug: "automation",
     title: "Automation services",
-    body: "Named workflow plays that connect your tools, cut manual busywork, and keep operations moving while your people focus on higher-value work.",
+    body: "Connect chat to the tools you already run—CRM, helpdesk, billing—so routine work does not sit in a queue waiting for someone to copy and paste.",
     points: [
-      "Lead capture, triage, and order updates",
-      "Approvals, alerts, and CRM sync",
-      "Pilot first, then scale to production",
+      "Lead capture and ticket routing",
+      "Order updates, approvals, and alerts",
+      "Pilot one workflow, then expand",
     ],
-  },
-] as const;
-
-export const capabilities = [
-  {
-    title: "Context-aware conversations",
-    body: "AI and machine learning that understand context, interpret user intent, and deliver relevant responses in real time.",
-    tone: "mint" as const,
-  },
-  {
-    title: "Automation that sticks",
-    body: "Design and ship automations that remove repetitive work—approvals, data handoffs, notifications, and back-office flows.",
-    tone: "blue" as const,
-  },
-  {
-    title: "Omnichannel by design",
-    body: "One experience across websites, social platforms, messaging apps, and email—consistent at every touchpoint.",
-    tone: "blue" as const,
-  },
-  {
-    title: "Customization & localization",
-    body: "Solutions shaped to your brand, tone, and market so interactions and workflows feel native to the communities you serve.",
-    tone: "mint" as const,
   },
 ] as const;
 
 export const whyFumbo = [
   {
-    title: "Cutting-edge technology",
-    body: "AI and machine learning that power personalized interactions and reliable automation across your channels and systems.",
+    title: "WhatsApp is the front door",
+    body: "In Ghana, messaging often beats a website form. We treat WhatsApp as a primary channel—then keep the same quality on web, social, and email.",
   },
   {
-    title: "Cultural sensitivity",
-    body: "Especially critical in markets like Ghana—interactions that are respectful, relevant, and tuned to local preferences.",
+    title: "Localization is the work",
+    body: "Tone, language, and context are designed into the first flow. Not translated onto a generic English bot after the fact.",
   },
   {
-    title: "Customization & flexibility",
-    body: "Chatbots and automations tailored to your industry, brand identity, and business objectives.",
+    title: "Handoff without the dead end",
+    body: "Routine questions get answered. Anything that needs judgment goes to your team with the thread intact.",
   },
   {
-    title: "Seamless integration",
-    body: "Engage customers and connect tools wherever work already happens—web, social, messaging, email, and your internal stack.",
+    title: "Wired into your stack",
+    body: "Chat is only useful if it can check an order, open a ticket, or update a CRM. We connect the conversation to the system of record.",
   },
   {
-    title: "Expertise & support",
-    body: "From consultation and implementation through maintenance and optimization, we stay with you.",
+    title: "Pilot, then widen",
+    body: "We start with one channel or one workflow so you can see it live—then expand coverage with your team, not a 40-page rollout plan.",
   },
   {
-    title: "Innovation & adaptability",
-    body: "We keep advancing our stack so your assistants and automations stay ahead as expectations evolve.",
+    title: "We stay after launch",
+    body: "Flows drift. Products change. We keep tuning the assistant and the automations as your operation does.",
   },
 ] as const;
 

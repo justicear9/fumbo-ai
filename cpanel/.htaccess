@@ -1,0 +1,21 @@
+RewriteEngine On
+
+# Keep SMTP config off the public web
+<Files "contact.config.php">
+  Require all denied
+</Files>
+
+DirectoryIndex index.html
+
+# /about → /about/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+RewriteRule ^(.*)$ /$1/ [R=301,L]
+
+# /about/ → /about/index.html (already DirectoryIndex)
+# Direct file fallbacks for export without trailing slash
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]

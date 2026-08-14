@@ -22,8 +22,8 @@ export function SiteFooter() {
             className="h-8 w-auto"
           />
           <p className="mt-4 max-w-[40ch] text-sm leading-relaxed text-white/45">
-            AI chatbots and automation services with cultural sensitivity—named from the Swahili
-            word for enigma.
+            AI chatbots and automation for teams whose customers already live on WhatsApp, web, and
+            social.
           </p>
           <p className="mt-3 text-sm text-white/35">Accra, Ghana · West Africa and beyond</p>
         </div>

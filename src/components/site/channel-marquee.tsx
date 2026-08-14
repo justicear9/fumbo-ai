@@ -11,7 +11,7 @@ export function ChannelMarquee({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "relative overflow-hidden border-y border-white/10 bg-[#06110d]/80 py-4",
+        "relative overflow-hidden border-y border-white/10 bg-[#06110d] py-3.5",
         className,
       )}
     >

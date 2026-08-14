@@ -15,6 +15,7 @@ export default function TermsPage() {
         eyebrow="Legal"
         title="Terms of use"
         description="By using this website, you agree to these terms. Product engagements are governed by separate commercial agreements."
+        showRobot={false}
       />
       <section className="bg-[#050a08] px-4 pb-24 md:px-8 md:pb-32">
         <div className="mx-auto max-w-[720px] space-y-8 text-sm leading-relaxed text-white/60 md:text-base">
