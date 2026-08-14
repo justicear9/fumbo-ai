@@ -5,12 +5,16 @@ import { PageHero } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
 import { ContactForm } from "@/components/site/contact-form";
 import { ProcessSection } from "@/components/site/trust-sections";
+import { JsonLd } from "@/components/site/json-ld";
 import { contactInfo } from "@/lib/content";
+import { breadcrumbList, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description: "Book a demo with Fumbo Ai. Tell us your channels, markets, and the work those threads create.",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Book a Demo",
+  description:
+    "Book a Fumbo Ai demo. Tell us how customers reach you and what those threads create inside your team. We will map a first live slice and next steps.",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   const whatsappHref = contactInfo.whatsapp
@@ -19,6 +23,7 @@ export default function ContactPage() {
 
   return (
     <SiteShell>
+      <JsonLd data={breadcrumbList("/contact")} />
       <PageHero
         eyebrow="Contact"
         title="Tell us how customers reach you"

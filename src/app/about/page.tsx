@@ -3,13 +3,16 @@ import Link from "next/link";
 import { SiteShell } from "@/components/site/shell";
 import { PageHero, CtaBand, SectionIntro } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
+import { JsonLd } from "@/components/site/json-ld";
 import { company, values, whyFumbo } from "@/lib/content";
+import { breadcrumbList, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About",
+export const metadata: Metadata = pageMetadata({
+  title: "About Fumbo Ai",
   description:
-    "Fumbo Ai is a Ghanaian company that builds AI chatbots and automation for teams worldwide.",
-};
+    "Fumbo Ai is a Ghanaian company that builds AI chatbots and automation for teams worldwide. Headquartered in Accra. We design, ship, and stay.",
+  path: "/about",
+});
 
 const facts = [
   { label: "Based in", value: "Accra, Ghana" },
@@ -20,6 +23,7 @@ const facts = [
 export default function AboutPage() {
   return (
     <SiteShell>
+      <JsonLd data={breadcrumbList("/about")} />
       <PageHero
         eyebrow="About Fumbo Ai Ltd"
         title="Who we are"

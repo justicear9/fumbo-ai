@@ -2,17 +2,21 @@ import type { Metadata } from "next";
 import { SiteShell } from "@/components/site/shell";
 import { PageHero, CtaBand } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
+import { JsonLd } from "@/components/site/json-ld";
 import { industries } from "@/lib/content";
+import { breadcrumbList, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Industries",
+export const metadata: Metadata = pageMetadata({
+  title: "AI Chatbots for Your Industry",
   description:
-    "Fumbo Ai chatbots and automation for enterprise, e-commerce, finance, telecom, travel, healthcare, education, and government.",
-};
+    "AI chatbots and automation for enterprise, e-commerce, finance, telecom, travel, healthcare, education, and government. See how Fumbo fits your sector.",
+  path: "/industries",
+});
 
 export default function IndustriesPage() {
   return (
     <SiteShell>
+      <JsonLd data={breadcrumbList("/industries")} />
       <PageHero
         eyebrow="Industries"
         title="Built for how your sector already talks to people"

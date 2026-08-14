@@ -5,17 +5,22 @@ import { PageHero, CtaBand, SectionIntro } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
 import { ProductShowcase } from "@/components/site/product-showcase";
 import { ChannelsSection } from "@/components/site/trust-sections";
+import { JsonLd } from "@/components/site/json-ld";
 import { services, useCases } from "@/lib/content";
+import { breadcrumbList, pageMetadata, servicePageSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Services",
+export const metadata: Metadata = pageMetadata({
+  title: "AI Chatbot and Automation Services",
   description:
-    "Operations AI and chatbots from Fumbo Ai. Automations that finish the work, on web, social, email, and WhatsApp.",
-};
+    "AI chatbots on web, social, email, and WhatsApp, plus automations that finish tickets, orders, and CRM updates. See Fumbo Ai chatbot and automation services.",
+  path: "/product",
+});
 
 export default function ProductPage() {
   return (
     <SiteShell>
+      <JsonLd data={breadcrumbList("/product")} />
+      <JsonLd data={servicePageSchema()} />
       <PageHero
         eyebrow="Services"
         title="Chatbots for the reply. Automation for the work behind it."

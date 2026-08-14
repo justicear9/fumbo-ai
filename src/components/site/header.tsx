@@ -23,7 +23,7 @@ export function SiteHeader() {
         <Link href="/" className="relative z-10 flex shrink-0 items-center pl-2">
           <Image
             src="/brand/logo_green.png"
-            alt="Fumbo"
+            alt="Fumbo Ai"
             width={126}
             height={37}
             className="h-7 w-auto"

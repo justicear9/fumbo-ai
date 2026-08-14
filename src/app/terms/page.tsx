@@ -2,15 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteShell } from "@/components/site/shell";
 import { PageHero } from "@/components/site/page-hero";
+import { JsonLd } from "@/components/site/json-ld";
+import { breadcrumbList, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Terms",
-  description: "Terms of use for the Fumbo Ai Ltd website.",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Terms of Use",
+  description:
+    "Terms of use for the Fumbo Ai Ltd website. Product work is covered by a separate commercial agreement.",
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (
     <SiteShell>
+      <JsonLd data={breadcrumbList("/terms")} />
       <PageHero
         eyebrow="Legal"
         title="Terms of use"

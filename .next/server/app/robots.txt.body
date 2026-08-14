@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+
+Host: https://fumbo.ai
+Sitemap: https://fumbo.ai/sitemap.xml

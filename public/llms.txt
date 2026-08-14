@@ -1,0 +1,20 @@
+# Fumbo Ai
+
+> AI chatbots and automation that understand your market.
+
+Fumbo Ai Ltd builds AI chatbots and automations for teams worldwide. Chatbots answer customers on web, WhatsApp, social, and email. Automations clear the work behind those conversations: tickets, orders, CRM updates, and a clean handoff to a person. We design, ship, and stay. Headquartered in Accra.
+
+## Services
+- /product: AI chatbots and automation services
+- /industries: Sector-specific chatbot and automation work
+- /contact: Book a demo
+
+## Company
+- /about: Who we are
+- /faq: Common questions
+- /privacy: Privacy policy
+- /terms: Terms of use
+
+## Contact
+- https://fumbo.ai/contact
+- hello@fumbo.ai

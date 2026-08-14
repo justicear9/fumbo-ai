@@ -2,15 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteShell } from "@/components/site/shell";
 import { PageHero } from "@/components/site/page-hero";
+import { JsonLd } from "@/components/site/json-ld";
+import { breadcrumbList, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Privacy",
-  description: "Privacy information for Fumbo Ai Ltd.",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Privacy Policy",
+  description:
+    "How Fumbo Ai Ltd uses contact details from this website and handles data in chatbot and automation work.",
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (
     <SiteShell>
+      <JsonLd data={breadcrumbList("/privacy")} />
       <PageHero
         eyebrow="Legal"
         title="Privacy"

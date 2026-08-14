@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { SiteShell } from "@/components/site/shell";
 import { Hero } from "@/components/site/hero";
 import { Reveal } from "@/components/site/reveal";
@@ -7,6 +8,14 @@ import { FaqList } from "@/components/site/faq-list";
 import { ProductShowcase } from "@/components/site/product-showcase";
 import { ChannelsSection } from "@/components/site/trust-sections";
 import { company, industries, services } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+  title: "AI Chatbots and Automation for Your Market | Fumbo Ai",
+  description:
+    "AI chatbots and automation that understand your market. Answer customers on web, WhatsApp, social, and email, then clear the work behind each chat. Book a demo.",
+  path: "/",
+});
 
 export default function HomePage() {
   return (

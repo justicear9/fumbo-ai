@@ -47,7 +47,7 @@ export function SiteFooter() {
             <Link href="/" className="inline-flex cursor-pointer">
               <Image
                 src="/brand/logo_white.png"
-                alt="Fumbo"
+                alt="Fumbo Ai"
                 width={160}
                 height={48}
                 className="h-8 w-auto"

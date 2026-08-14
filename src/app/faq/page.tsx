@@ -3,15 +3,21 @@ import Link from "next/link";
 import { SiteShell } from "@/components/site/shell";
 import { PageHero, CtaBand } from "@/components/site/page-hero";
 import { FaqList } from "@/components/site/faq-list";
+import { JsonLd } from "@/components/site/json-ld";
+import { breadcrumbList, faqPageSchema, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "FAQ",
-  description: "How Fumbo Ai chatbots and automations work, who we serve, and what a first engagement looks like.",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "AI Chatbot FAQ",
+  description:
+    "Answers about Fumbo Ai chatbots, automation, channels, languages, security, and how a first engagement works. Book a demo if you need a specific path.",
+  path: "/faq",
+});
 
 export default function FaqPage() {
   return (
     <SiteShell>
+      <JsonLd data={breadcrumbList("/faq")} />
+      <JsonLd data={faqPageSchema()} />
       <PageHero
         eyebrow="FAQ"
         title="Questions teams ask first"
