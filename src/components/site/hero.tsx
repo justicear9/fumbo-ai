@@ -18,10 +18,10 @@ export function Hero() {
       <AmbientField intensity="medium" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_12%_18%,rgba(36,237,164,0.08),transparent_44%),radial-gradient(ellipse_at_88%_14%,rgba(0,150,246,0.08),transparent_42%)]" />
 
-      <div className="relative mx-auto grid w-full flex-1 max-w-[1400px] grid-cols-1 items-center lg:grid-cols-2">
+      <div className="relative mx-auto grid w-full flex-1 max-w-[1400px] grid-cols-1 items-center lg:grid-cols-[minmax(0,1.45fr)_minmax(0,0.55fr)]">
         <Spotlight size={380} />
 
-        <div className="pointer-events-none relative z-20 flex flex-col justify-center px-4 pb-6 pt-28 md:px-8 lg:pb-8 lg:pt-24">
+        <div className="pointer-events-none relative z-20 flex flex-col justify-center px-4 pb-6 pt-28 md:px-8 lg:max-w-[46rem] lg:pb-8 lg:pt-24">
           <motion.p
             className="mb-5 flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.22em] text-fumbo-mint/90"
             initial={reduce ? false : { opacity: 0, y: 16 }}
@@ -36,7 +36,7 @@ export function Hero() {
           </motion.p>
 
           <motion.h1
-            className="text-balance text-4xl font-semibold tracking-tight text-white md:text-5xl lg:text-[3.35rem] lg:leading-[1.08]"
+            className="max-w-[14em] text-4xl font-semibold tracking-tight text-white md:text-5xl lg:text-[3.35rem] lg:leading-[1.08]"
             initial={reduce ? false : { opacity: 0, y: 28, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.9, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
@@ -45,7 +45,7 @@ export function Hero() {
           </motion.h1>
 
           <motion.p
-            className="mt-5 max-w-[42ch] text-base leading-relaxed text-white/65 md:text-lg"
+            className="mt-5 max-w-[38rem] text-base leading-relaxed text-white/65 md:text-lg"
             initial={reduce ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
@@ -112,7 +112,7 @@ export function Hero() {
         </div>
 
         <motion.div
-          className="relative z-10 h-[min(54vh,480px)] w-full lg:absolute lg:inset-y-0 lg:left-[34%] lg:right-0 lg:h-auto xl:left-[38%] 2xl:left-[44%] 2xl:right-[calc(50%-50vw)]"
+          className="relative z-10 h-[min(54vh,480px)] w-full lg:absolute lg:inset-y-0 lg:left-[42%] lg:right-0 lg:h-auto xl:left-[46%] 2xl:left-[50%] 2xl:right-[calc(50%-50vw)]"
           initial={reduce ? false : { opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}

@@ -4,11 +4,11 @@
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/api/contact/route": "app/api/contact/route.js",
   "/page": "app/page.js",
-  "/faq/page": "app/faq/page.js",
   "/contact/page": "app/contact/page.js",
+  "/faq/page": "app/faq/page.js",
   "/privacy/page": "app/privacy/page.js",
   "/about/page": "app/about/page.js",
   "/industries/page": "app/industries/page.js",
-  "/terms/page": "app/terms/page.js",
-  "/product/page": "app/product/page.js"
+  "/product/page": "app/product/page.js",
+  "/terms/page": "app/terms/page.js"
 }

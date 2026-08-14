@@ -4,11 +4,11 @@
   "/favicon.ico/route": "/favicon.ico",
   "/api/contact/route": "/api/contact",
   "/page": "/",
-  "/faq/page": "/faq",
   "/contact/page": "/contact",
+  "/faq/page": "/faq",
   "/privacy/page": "/privacy",
   "/about/page": "/about",
   "/industries/page": "/industries",
-  "/terms/page": "/terms",
-  "/product/page": "/product"
+  "/product/page": "/product",
+  "/terms/page": "/terms"
 }

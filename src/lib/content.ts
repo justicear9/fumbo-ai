@@ -4,7 +4,7 @@ export const company = {
   tagline: "AI chatbots and automation that understand your market",
   offering: "AI chatbots and automation",
   heroLead:
-    "Intelligent conversations on web, WhatsApp, social, and email, plus automations that clear routine work: tickets, orders, CRM, and a clean handoff to your team. We design, ship, and stay. A Ghanaian company serving Ghana, West Africa, and teams around the world.",
+    "Intelligent conversations on web, WhatsApp, social, and email, plus automations that clear routine work: tickets, orders, CRM, and a clean handoff to your team. We design, ship, and stay.",
   summary:
     "We build AI chatbots and automations that answer customers on every channel, then finish the work those conversations create inside your team.",
   mission:
