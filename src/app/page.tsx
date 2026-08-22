@@ -7,6 +7,7 @@ import { CtaBand, SectionIntro } from "@/components/site/page-hero";
 import { FaqList } from "@/components/site/faq-list";
 import { ProductShowcase } from "@/components/site/product-showcase";
 import { ChannelsSection } from "@/components/site/trust-sections";
+import { ClientsSection } from "@/components/site/clients-section";
 import { company, industries, services } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 
@@ -92,6 +93,7 @@ export default function HomePage() {
       </section>
 
       <ProductShowcase />
+      <ClientsSection />
       <ChannelsSection />
 
       <section className="bg-[#050a08] px-4 py-20 md:px-8 md:py-28">

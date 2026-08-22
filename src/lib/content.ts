@@ -254,6 +254,60 @@ export const industries: Industry[] = [
   },
 ];
 
+export type Client = {
+  name: string;
+  sector: string;
+  logo?: string;
+  stat: string;
+  result: string;
+};
+
+/** Named logos live in /public/clients. Stats are outcome lifts. */
+export const clients: Client[] = [
+  {
+    name: "Bedita Pharmaceuticals",
+    sector: "Life sciences",
+    logo: "/clients/bedita-pharmaceuticals.png",
+    stat: "52%",
+    result: "Higher transaction volume. Requests and supply close faster.",
+  },
+  {
+    name: "Mews",
+    sector: "News",
+    logo: "/clients/Mews-AI.png",
+    stat: "80%",
+    result: "Faster response. Higher accuracy.",
+  },
+  {
+    name: "Comrade AI",
+    sector: "Politics",
+    logo: "/clients/comrade.png",
+    stat: "75%",
+    result: "Clearer briefs. Faster reach to the field.",
+  },
+  {
+    name: "Admissions Checker",
+    sector: "Education",
+    logo: "/clients/admissions-checker.png",
+    stat: "60%",
+    result: "Faster signup. Scholarships in the same flow.",
+  },
+  {
+    name: "The Game of Politics",
+    sector: "Civic",
+    logo: "/clients/the-game-of-politics.png",
+    stat: "65%",
+    result: "Longer sessions. Matches that finish.",
+  },
+  {
+    name: "How Ghanaian Are You",
+    sector: "Culture",
+    logo: "/clients/how-ghanaian-are-you.png",
+    stat: "70%",
+    result: "More orders from the site. Buy without walking in.",
+  },
+];
+
 export const faqs = [
   {
     question: "What does Fumbo Ai do?",
