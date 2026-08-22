@@ -26,11 +26,11 @@ export function ClientsSection() {
           <p className="mb-4 text-[11px] font-medium uppercase tracking-[0.22em] text-fumbo-mint/90">
             Clients
           </p>
-          <h2 className="max-w-[12ch] text-3xl font-semibold tracking-tight text-white md:text-5xl">
-            Who we have shipped with
+          <h2 className="max-w-[16ch] text-3xl font-semibold tracking-tight text-white md:text-5xl">
+          Built for impact. Proven in the real world.
           </h2>
-          <p className="mt-5 max-w-[36ch] text-base leading-relaxed text-white/60 md:text-lg">
-            Pharma, news, politics, admissions, civic, and culture. Hover a mark for the result.
+          <p className="mt-5 max-w-[42ch] text-base leading-relaxed text-white/60 md:text-lg">
+          From intelligent automation to AI-powered customer experiences, Fumbo helps businesses move faster, work smarter, and scale what matters.
           </p>
         </Reveal>
 
