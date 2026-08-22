@@ -8,12 +8,12 @@
   "/robots.txt/route": "/robots.txt",
   "/sitemap.xml/route": "/sitemap.xml",
   "/api/contact/route": "/api/contact",
+  "/about/page": "/about",
   "/faq/page": "/faq",
   "/contact/page": "/contact",
-  "/about/page": "/about",
-  "/privacy/page": "/privacy",
   "/industries/page": "/industries",
-  "/terms/page": "/terms",
+  "/privacy/page": "/privacy",
+  "/page": "/",
   "/product/page": "/product",
-  "/page": "/"
+  "/terms/page": "/terms"
 }

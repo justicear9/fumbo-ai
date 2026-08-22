@@ -25,9 +25,11 @@ Open [http://localhost:3000](http://localhost:3000).
 - Brand assets live in `public/brand/`
 - Spline scene URL is configured in `src/components/site/hero.tsx`
 
-## Contact form (SMTP)
+## Contact form
 
-Copy `.env.example` to `.env.local` and fill in your mail server details:
+Demo requests are posted to **Fumbo Hunter** as inbound leads. SMTP is optional backup.
+
+Copy `.env.example` to `.env.local`:
 
 ```bash
 cp .env.example .env.local
@@ -35,17 +37,19 @@ cp .env.example .env.local
 
 | Variable | What it is |
 | --- | --- |
-| `SMTP_HOST` | SMTP server, e.g. `smtp.gmail.com` or your host’s SMTP |
+| `HUNTER_LEAD_URL` | Hunter webhook, usually `https://bdr.fumbo.ai/api/webhooks/site-lead` |
+| `HUNTER_LEAD_SECRET` | Same value as Hunter’s `SITE_LEAD_SECRET` |
+| `SMTP_HOST` | Optional. Mail server if you also want an email copy |
 | `SMTP_PORT` | Usually `587` (STARTTLS) or `465` (SSL) |
 | `SMTP_SECURE` | `true` only if the port is `465` |
 | `SMTP_USER` | SMTP username |
-| `SMTP_PASS` | SMTP password (for Gmail/Google Workspace, use an [App Password](https://support.google.com/accounts/answer/185833)) |
+| `SMTP_PASS` | SMTP password (Gmail/Workspace: [App Password](https://support.google.com/accounts/answer/185833)) |
 | `SMTP_FROM` | From header, e.g. `"Fumbo Ai <hello@fumbo.ai>"` |
-| `CONTACT_TO` | Inbox that should receive demo requests |
+| `CONTACT_TO` | Inbox for the optional email copy |
 
-Restart `npm run dev` after saving. On Render, add the same keys in the service **Environment** tab.
+On Hunter, set `SITE_LEAD_SECRET` to the same secret and restart.
 
-The form uses a honeypot field, a minimum fill-time check, origin checks, and per-IP rate limiting so bots are less likely to land in your inbox.
+Spam protection: two honeypots, minimum fill-time, same-origin check, per-IP and per-email rate limits, disposable-mail block, and a cap on links in the message. Bots that fill a hidden field get a fake success and never reach Hunter.
 
 ## Deploy
 

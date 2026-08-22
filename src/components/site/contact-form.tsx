@@ -34,6 +34,7 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
             company: String(data.get("company") || ""),
             message: String(data.get("message") || ""),
             website: String(data.get("website") || ""),
+            fax: String(data.get("fax") || ""),
             startedAt,
           }),
         },
@@ -69,6 +70,14 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
           <input
             id="website"
             name="website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+          <label htmlFor="fax">Fax</label>
+          <input
+            id="fax"
+            name="fax"
             type="text"
             tabIndex={-1}
             autoComplete="off"

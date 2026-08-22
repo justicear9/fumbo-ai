@@ -3,12 +3,15 @@ import {
   clampField,
   fieldLimits,
   getClientIp,
+  honeypotValue,
   isAllowedOrigin,
+  isEmailRateLimited,
   isRateLimited,
   isValidEmail,
   looksLikeSpam,
 } from "@/lib/contact-guard";
-import { getContactInbox, getFromAddress, getMailer, isMailConfigured } from "@/lib/mailer";
+import { isHunterConfigured, sendHunterLead } from "@/lib/hunter";
+import { getContactInbox, getFromAddress, sendContactMail } from "@/lib/mailer";
 
 export const runtime = "nodejs";
 
@@ -53,10 +56,10 @@ export async function POST(request: Request) {
   const email = clampField(payload.email, fieldLimits.email).toLowerCase();
   const company = clampField(payload.company, fieldLimits.company);
   const message = clampField(payload.message, fieldLimits.message);
-  const honeypot = clampField(payload.website, 200);
+  const honeypot = honeypotValue(payload);
   const startedAt = Number(payload.startedAt);
 
-  const spam = looksLikeSpam({ honeypot, startedAt, message });
+  const spam = looksLikeSpam({ honeypot, startedAt, name, email, message });
   if (spam === "honeypot") {
     return silentOk();
   }
@@ -71,31 +74,37 @@ export async function POST(request: Request) {
     );
   }
 
-  if (!isMailConfigured()) {
+  if (isEmailRateLimited(email)) {
     return NextResponse.json(
-      { ok: false, error: "Email is not configured yet. Add SMTP settings in .env.local." },
-      { status: 503 },
+      { ok: false, error: "Too many requests. Please wait a few minutes and try again." },
+      { status: 429 },
     );
   }
 
+  const hunterReady = isHunterConfigured();
+  const notes = message || "(No additional notes)";
   const to = getContactInbox();
   const from = getFromAddress();
-  const notes = message || "(No additional notes)";
+  let hunterOk = false;
+  let mailOk = false;
+
+  if (hunterReady) {
+    try {
+      await sendHunterLead({ name, email, company, message: notes, ip });
+      hunterOk = true;
+    } catch (error) {
+      console.error("Hunter lead failed", error instanceof Error ? error.message : "unknown");
+      hunterOk = false;
+    }
+  }
 
   try {
-    const mailer = getMailer();
-    await mailer.sendMail({
+    await sendContactMail({
       from,
       to,
       replyTo: email,
       subject: `Demo request — ${company || name}`,
-      text: [
-        `Name: ${name}`,
-        `Email: ${email}`,
-        `Company: ${company || "—"}`,
-        "",
-        notes,
-      ].join("\n"),
+      text: [`Name: ${name}`, `Email: ${email}`, `Company: ${company || "—"}`, "", notes].join("\n"),
       html: `
         <div style="font-family:Arial,sans-serif;line-height:1.5;color:#111">
           <p><strong>Name:</strong> ${escapeHtml(name)}</p>
@@ -105,8 +114,13 @@ export async function POST(request: Request) {
         </div>
       `,
     });
+    mailOk = true;
   } catch (error) {
     console.error("Contact mail failed", error instanceof Error ? error.message : "unknown");
+    mailOk = false;
+  }
+
+  if (!hunterOk && !mailOk) {
     return NextResponse.json(
       { ok: false, error: "Could not send the message. Please try again shortly." },
       { status: 502 },
