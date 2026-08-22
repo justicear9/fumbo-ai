@@ -10,10 +10,10 @@
   "/api/contact/route": "app/api/contact/route.js",
   "/faq/page": "app/faq/page.js",
   "/contact/page": "app/contact/page.js",
-  "/industries/page": "app/industries/page.js",
   "/about/page": "app/about/page.js",
   "/page": "app/page.js",
   "/privacy/page": "app/privacy/page.js",
-  "/product/page": "app/product/page.js",
-  "/terms/page": "app/terms/page.js"
+  "/industries/page": "app/industries/page.js",
+  "/terms/page": "app/terms/page.js",
+  "/product/page": "app/product/page.js"
 }

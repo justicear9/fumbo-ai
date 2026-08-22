@@ -266,7 +266,7 @@ export type Client = {
 export const clients: Client[] = [
   {
     name: "Bedita Pharmaceuticals",
-    sector: "Life sciences",
+    sector: "Pharma",
     logo: "/clients/bedita-pharmaceuticals.png",
     stat: "52%",
     result: "Higher transaction volume. Requests and supply close faster.",
@@ -294,7 +294,7 @@ export const clients: Client[] = [
   },
   {
     name: "The Game of Politics",
-    sector: "Civic",
+    sector: "Gaming",
     logo: "/clients/the-game-of-politics.png",
     stat: "65%",
     result: "Longer sessions. Matches that finish.",
@@ -310,59 +310,54 @@ export const clients: Client[] = [
 
 export const faqs = [
   {
-    question: "What does Fumbo Ai do?",
+    question: "How soon can this be live?",
     answer:
-      "We build AI for operations: automations that finish the work, and chatbots on web, social, email, and WhatsApp. One partner for the conversation and the work behind it.",
+      "A first slice can be live in weeks, not a six-month programme. We pick one channel or one workflow, ship it to real customers, then widen with your team.",
   },
   {
-    question: "What is an AI chatbot?",
+    question: "Does it work with WhatsApp and the tools we already have?",
     answer:
-      "Software that reads a customer's message and replies in natural language. Fumbo's work is the tone, the context, and the handoff across the channels you already use.",
+      "Yes. Chat sits on web, WhatsApp, social, and email. Automations connect those threads to the CRM, helpdesk, and ops tools you already run, so staff are not copying chats into another system.",
   },
   {
-    question: "What do your automations cover?",
+    question: "What do we need to give you to start?",
     answer:
-      "Lead capture into a CRM, ticket routing, order-status replies, approvals, alerts, and onboarding checklists. Connected to the tools you already use.",
+      "How customers reach you today, the ten questions your team answers every day, and access to the systems those chats already create work in. We do not need a full data science team on your side.",
   },
   {
-    question: "How do engagements work?",
+    question: "Will this replace our staff?",
     answer:
-      "Discover, design, pilot, then widen. We start with one live slice so you can see it with real customers, then expand coverage with your team.",
+      "No. Fumbo takes the repeat questions and the copy-paste work. Anything that needs judgment goes to a person, with the full thread attached.",
   },
   {
-    question: "How does Fumbo work with our channels and tools?",
+    question: "What if the assistant gets an answer wrong?",
     answer:
-      "Chatbots sit on web, social, email, and WhatsApp. Automations connect those conversations to CRM, helpdesk, and ops systems so work moves without copy-paste.",
+      "It should hand off. We set the topics it is allowed to handle, the tone, and when a human takes over. After launch we tune from real chats so the misses shrink.",
   },
   {
-    question: "What makes Fumbo different?",
+    question: "How do we know it is working?",
     answer:
-      "We design, ship, and stay. One partner for the customer conversation and the work behind it, wired into the tools you already run.",
+      "We agree the measure before we ship: faster replies, fewer tickets, more completed orders, or fewer dropped WhatsApp threads. You see that on live traffic, not a slide.",
   },
   {
-    question: "Can a chatbot replace human agents?",
+    question: "Who owns the conversations and our data?",
     answer:
-      "No. Fumbo handles the daily questions and escalates anything that needs judgment, with the thread intact.",
+      "You do. Access, retention, and where the system runs sit in the agreement. We do not train a public model on your customer chats.",
   },
   {
-    question: "Which industries do you serve?",
+    question: "How do you charge?",
     answer:
-      "Enterprises, e-commerce, finance, telecom, travel, healthcare, education, and government. Each engagement follows that sector's workflows and trust rules.",
+      "We scope after we see your channels and volume. A demo maps a first slice and a price for that slice. There is no public rate card because a pharmacy WhatsApp bot and a newsroom desk are not the same job.",
   },
   {
-    question: "How do you handle data security?",
+    question: "Do you disappear after launch?",
     answer:
-      "Encryption, access controls, and deployment practices sit in every rollout. Controls follow your industry and the agreement we sign.",
+      "No. Products change, new questions show up, and flows drift. We stay on for maintenance and tuning so the assistant still matches how you sell and support.",
   },
   {
-    question: "Do you support local languages?",
+    question: "Can we start on one channel?",
     answer:
-      "Yes. Multilingual replies and phrasing that fits the market. We write the first flow for how your customers talk.",
-  },
-  {
-    question: "What happens after launch?",
-    answer:
-      "We stay on for maintenance and tuning. Flows drift as products change. The assistant should keep matching your goals.",
+      "Yes. Most teams start on WhatsApp or the website, prove it with real customers, then add the rest. That is the engagement, not a full rebuild on day one.",
   },
 ] as const;
 

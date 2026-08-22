@@ -6,9 +6,8 @@ import { Reveal } from "@/components/site/reveal";
 import { CtaBand, SectionIntro } from "@/components/site/page-hero";
 import { FaqList } from "@/components/site/faq-list";
 import { ProductShowcase } from "@/components/site/product-showcase";
-import { ChannelsSection } from "@/components/site/trust-sections";
 import { ClientsSection } from "@/components/site/clients-section";
-import { company, industries, services } from "@/lib/content";
+import { company, services } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -94,42 +93,15 @@ export default function HomePage() {
 
       <ProductShowcase />
       <ClientsSection />
-      <ChannelsSection />
-
-      <section className="bg-[#050a08] px-4 py-20 md:px-8 md:py-28">
-        <div className="mx-auto max-w-[1400px]">
-          <Reveal>
-            <SectionIntro
-              title="Built for the work your sector already does"
-              body="Retail floors, bank queues, campus desks. The systems follow how that sector already talks to people, on every channel they use."
-            />
-          </Reveal>
-
-          <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {industries.map((industry, index) => (
-              <Reveal key={industry.slug} delay={index * 0.03} className="h-full min-w-0">
-                <Link
-                  href={`/industries#${industry.slug}`}
-                  className="group flex h-full min-h-[168px] cursor-pointer flex-col justify-between rounded-[1.35rem] border border-white/10 bg-[#0a1511] p-6 transition-[border-color,transform,background-color] duration-300 hover:-translate-y-1 hover:border-fumbo-mint/30 hover:bg-[#0c1a14]"
-                >
-                  <h3 className="text-lg font-semibold text-white group-hover:text-fumbo-mint">
-                    {industry.name}
-                  </h3>
-                  <p className="mt-4 text-sm leading-relaxed text-white/50">
-                    {industry.summary}
-                  </p>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="bg-[#06110d] px-4 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-[1400px]">
           <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <Reveal>
-              <SectionIntro title="Questions teams ask first" />
+              <SectionIntro
+                title="Before you book a demo"
+                titleClassName="max-w-none lg:whitespace-nowrap"
+              />
             </Reveal>
             <Reveal>
               <Link
@@ -146,8 +118,9 @@ export default function HomePage() {
       </section>
 
       <CtaBand
-        title="See this on your stack"
-        body="Tell us how customers reach you, and what those threads create inside the team. We will map a first live slice."
+        title="Book a 20-minute demo"
+        titleClassName="max-w-none lg:whitespace-nowrap"
+        body="Tell us how customers reach you, and what those chats create for the team. We will map a first live slice."
       />
     </SiteShell>
   );

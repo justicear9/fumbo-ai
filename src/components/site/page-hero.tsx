@@ -20,6 +20,7 @@ type PageHeroProps = {
   title: string;
   description: string;
   className?: string;
+  titleClassName?: string;
   actions?: ReactNode;
   showRobot?: boolean;
 };
@@ -29,6 +30,7 @@ export function PageHero({
   title,
   description,
   className,
+  titleClassName,
   actions,
   showRobot = true,
 }: PageHeroProps) {
@@ -61,7 +63,10 @@ export function PageHero({
             </motion.p>
           ) : null}
           <motion.h1
-            className="max-w-[16ch] text-balance text-4xl font-semibold tracking-tight text-white md:text-5xl lg:text-[3.25rem] lg:leading-[1.08]"
+            className={cn(
+              "max-w-[16ch] text-balance text-4xl font-semibold tracking-tight text-white md:text-5xl lg:text-[3.25rem] lg:leading-[1.08]",
+              titleClassName,
+            )}
             initial={reduce ? false : { opacity: 0, y: 24, filter: "blur(8px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.8, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
@@ -108,6 +113,7 @@ type CtaBandProps = {
   body: string;
   href?: string;
   label?: string;
+  titleClassName?: string;
 };
 
 export function CtaBand({
@@ -115,6 +121,7 @@ export function CtaBand({
   body,
   href = "/contact",
   label = "Book a demo",
+  titleClassName,
 }: CtaBandProps) {
   return (
     <section className="relative overflow-hidden bg-[#050a08] px-4 py-20 md:px-8 md:py-28">
@@ -123,7 +130,12 @@ export function CtaBand({
         <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[radial-gradient(ellipse_at_top_left,rgba(36,237,164,0.18),transparent_42%),radial-gradient(ellipse_at_bottom_right,rgba(0,150,246,0.16),transparent_42%),#08140f] p-1.5">
           <div className="flex flex-col gap-8 rounded-[calc(2rem-0.375rem)] border border-white/8 bg-[#07110d]/75 px-6 py-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] sm:px-8 sm:py-10 md:flex-row md:items-end md:justify-between md:px-12 md:py-14">
             <div>
-              <h2 className="max-w-[14ch] text-3xl font-semibold tracking-tight text-white md:text-4xl">
+              <h2
+                className={cn(
+                  "max-w-[14ch] text-3xl font-semibold tracking-tight text-white md:text-4xl",
+                  titleClassName,
+                )}
+              >
                 {title}
               </h2>
               <p className="mt-4 max-w-[42ch] text-base leading-relaxed text-white/60">
@@ -151,14 +163,21 @@ export function SectionIntro({
   title,
   body,
   className,
+  titleClassName,
 }: {
   title: string;
   body?: string;
   className?: string;
+  titleClassName?: string;
 }) {
   return (
     <div className={cn(className)}>
-      <h2 className="max-w-[16ch] text-3xl font-semibold tracking-tight text-white md:text-5xl">
+      <h2
+        className={cn(
+          "max-w-[16ch] text-3xl font-semibold tracking-tight text-white md:text-5xl",
+          titleClassName,
+        )}
+      >
         {title}
       </h2>
       {body ? (

@@ -41,7 +41,7 @@ export function ClientsSection() {
                 <li
                   key={client.name}
                   className={cn(
-                    "relative flex min-h-[10.5rem] items-center justify-center px-3 py-6 md:min-h-[11.5rem]",
+                    "relative flex min-h-[10.5rem] items-center justify-center px-3 pb-5 pt-9 md:min-h-[11.5rem]",
                     index % 2 === 0 && "max-sm:border-r max-sm:border-dashed max-sm:border-white/12",
                     index < 4 && "max-sm:border-b max-sm:border-dashed max-sm:border-white/12",
                     index % 3 !== 2 && "sm:border-r sm:border-dashed sm:border-white/12",
@@ -82,6 +82,9 @@ export function ClientsSection() {
                       <ResultCopy stat={client.stat} result={client.result} />
                     </div>
                   </div>
+                  <span className="pointer-events-none absolute left-3 top-3 rounded-full border border-fumbo-mint/20 bg-fumbo-mint/[0.07] px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.16em] text-fumbo-mint/90">
+                    {client.sector}
+                  </span>
                 </li>
               ))}
             </ul>

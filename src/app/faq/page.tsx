@@ -9,7 +9,7 @@ import { breadcrumbList, faqPageSchema, pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "AI Chatbot FAQ",
   description:
-    "Answers about Fumbo Ai chatbots, automation, channels, languages, security, and how a first engagement works. Book a demo if you need a specific path.",
+    "How soon Fumbo can go live, WhatsApp and your tools, staff, data, pricing, and what we need from you to start. Book a demo if you need a specific path.",
   path: "/faq",
 });
 
@@ -20,8 +20,9 @@ export default function FaqPage() {
       <JsonLd data={faqPageSchema()} />
       <PageHero
         eyebrow="FAQ"
-        title="Questions teams ask first"
-        description="How Fumbo works, who we serve, and what a first engagement looks like."
+        title="Before you book a demo"
+        titleClassName="max-w-[26ch] lg:max-w-none lg:whitespace-nowrap"
+        description="Time, tools, staff, and what we need from you. Straight answers."
       />
 
       <section className="bg-[#050a08] px-4 pb-24 md:px-8 md:pb-32">

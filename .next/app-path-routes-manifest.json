@@ -10,10 +10,10 @@
   "/api/contact/route": "/api/contact",
   "/faq/page": "/faq",
   "/contact/page": "/contact",
-  "/industries/page": "/industries",
   "/about/page": "/about",
   "/page": "/",
   "/privacy/page": "/privacy",
-  "/product/page": "/product",
-  "/terms/page": "/terms"
+  "/industries/page": "/industries",
+  "/terms/page": "/terms",
+  "/product/page": "/product"
 }
